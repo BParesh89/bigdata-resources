@@ -25,3 +25,5 @@ This repo contains resources related to several big data technologies like hadoo
 [Another collection](https://github.com/UpendraNallabolu/BigData_InterviewQuestions)
 
 [Detailed Interview collection](https://github.com/SatyaRaghuNandan/BigData-Interview-Prep)
+
+[Practical question with code](https://github.com/amarkum/interview-brushups)
