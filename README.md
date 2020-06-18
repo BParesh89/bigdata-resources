@@ -6,5 +6,10 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Hadoop - tutorialspoint](https://www.tutorialspoint.com/hadoop/hadoop_hdfs_overview.htm)
 
+# Blogs
+[http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/](http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/)
+
+[https://blog.matthewrathbone.com/](https://blog.matthewrathbone.com/)
+
 # Interview resources
 [Hadoop interview questions](https://www.besanttechnologies.com/hadoop-interview-questions-and-answers) 
