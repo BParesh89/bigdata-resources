@@ -11,5 +11,7 @@ This repo contains resources related to several big data technologies like hadoo
 
 [https://blog.matthewrathbone.com/](https://blog.matthewrathbone.com/)
 
+[https://blog.clairvoyantsoft.com](https://blog.clairvoyantsoft.com/tagged/big-data)
+
 # Interview resources
 [Hadoop interview questions](https://www.besanttechnologies.com/hadoop-interview-questions-and-answers) 
