@@ -15,3 +15,13 @@ This repo contains resources related to several big data technologies like hadoo
 
 # Interview resources
 [Hadoop interview questions](https://www.besanttechnologies.com/hadoop-interview-questions-and-answers) 
+
+[Andrew Kretz guide](https://github.com/andkret/Cookbook/blob/master/sections/08-InterviewQuestions.md)
+
+[Big Data](https://github.com/PrashantM89/BigData_Interview_QA/blob/master/Interview_Q%26A.txt)
+ 
+[Big Data Stack interview collection](https://github.com/hemant-rout/BigDataInterview)
+
+[Another collection](https://github.com/UpendraNallabolu/BigData_InterviewQuestions)
+
+[Detailed Interview collection](https://github.com/SatyaRaghuNandan/BigData-Interview-Prep)
