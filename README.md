@@ -23,6 +23,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [itversity](https://www.youtube.com/channel/UCakdSIPsJqiOLqylgoYmwQg)
 
+[AI Engineering](https://www.youtube.com/channel/UCwBs8TLOogwyGd0GxHCp-Dw)
+
 ## file formats and their comparison
 
 [file formats in hadoop](https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271)
