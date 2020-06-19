@@ -37,3 +37,5 @@ This repo contains resources related to several big data technologies like hadoo
 [Detailed Interview collection](https://github.com/SatyaRaghuNandan/BigData-Interview-Prep)
 
 [Practical question with code](https://github.com/amarkum/interview-brushups)
+
+[Kafka Interview questions](https://www.onlineinterviewquestions.com/apache-kafka-interview-questions)
