@@ -6,6 +6,14 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Hadoop - tutorialspoint](https://www.tutorialspoint.com/hadoop/hadoop_hdfs_overview.htm)
 
+## file formats and their comparison
+
+[file formats in hadoop](https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271)
+
+[file format - when and what to use](https://nxtgen.com/hadoop-file-formats-when-and-what-to-use)
+
+[Row-oriented vs column oriented formats](http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/)
+
 # Blogs
 [http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/](http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/)
 
