@@ -21,6 +21,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Kal Wehner - kafka](https://www.youtube.com/user/megachucky/videos)
 
+[itversity](https://www.youtube.com/channel/UCakdSIPsJqiOLqylgoYmwQg)
+
 ## file formats and their comparison
 
 [file formats in hadoop](https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271)
