@@ -23,6 +23,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Ashkrit blog](http://ashkrit.blogspot.com/)
 
+[Spark on docker](https://towardsdatascience.com/diy-apache-spark-docker-bb4f11c10d24)
+
 # Interview resources
 [Hadoop interview questions](https://www.besanttechnologies.com/hadoop-interview-questions-and-answers) 
 
@@ -39,3 +41,5 @@ This repo contains resources related to several big data technologies like hadoo
 [Practical question with code](https://github.com/amarkum/interview-brushups)
 
 [Kafka Interview questions](https://www.onlineinterviewquestions.com/apache-kafka-interview-questions)
+
+[Scala interview questions](https://github.com/Jarlakxen/Scala-Interview-Questions)
