@@ -25,6 +25,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [AI Engineering](https://www.youtube.com/channel/UCwBs8TLOogwyGd0GxHCp-Dw)
 
+[Talent Origin](https://www.youtube.com/channel/UCidQrtaWcEJ-1E-ikTP35qg/featured)
+
 ## file formats and their comparison
 
 [file formats in hadoop](https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271)
