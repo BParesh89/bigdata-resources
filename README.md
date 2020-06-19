@@ -6,6 +6,19 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Hadoop - tutorialspoint](https://www.tutorialspoint.com/hadoop/hadoop_hdfs_overview.htm)
 
+## youtube channels
+[Data Savvy](https://www.youtube.com/watch?v=jBArqO7isdg&list=PL9sbKmQTkW05mXqnq1vrrT8pCsEa53std)
+
+[Tech with Viresh](https://www.youtube.com/channel/UCZqHmLZxX0KC6PiJHETflOg)
+
+[DataMaking](https://www.youtube.com/channel/UCFQucNX7WsUwaWGNTrn6bIQ)
+
+[LearningJournal](https://www.youtube.com/channel/UC8OU1Tc1kxiI37uXBAbTX7A)
+
+[TrendyTech](https://www.youtube.com/channel/UCbTggJVf0NDTfWX-C_gUGSg)
+
+[LearnToSpark](https://www.youtube.com/channel/UCl8BC-R6fqITW9UrSXj5Uxg/videos)
+
 ## file formats and their comparison
 
 [file formats in hadoop](https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271)
