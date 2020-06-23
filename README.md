@@ -46,6 +46,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Spark on docker](https://towardsdatascience.com/diy-apache-spark-docker-bb4f11c10d24)
 
+[Byte Size](https://www.pavanpkulkarni.com/blog/13-spark-on-docker/)
+
 # Interview resources
 [Hadoop interview questions](https://www.besanttechnologies.com/hadoop-interview-questions-and-answers) 
 
