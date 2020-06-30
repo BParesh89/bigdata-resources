@@ -35,6 +35,10 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Row-oriented vs column oriented formats](http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/)
 
+# Spark Performance optimization
+[apache spark best practices](https://umbertogriffo.gitbook.io/apache-spark-best-practices-and-tuning/)
+[https://www.bi4all.pt/en/news/en-blog/apache-spark-best-practices/](https://www.bi4all.pt/en/news/en-blog/apache-spark-best-practices/) -- includes calculating number of executors
+
 # Blogs
 [http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/](http://timepasstechies.com/row-oriented-column-oriented-file-formats-hadoop/)
 
