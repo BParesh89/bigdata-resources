@@ -77,3 +77,9 @@ This repo contains resources related to several big data technologies like hadoo
 [Kafka Interview questions](https://www.onlineinterviewquestions.com/apache-kafka-interview-questions)
 
 [Scala interview questions](https://github.com/Jarlakxen/Scala-Interview-Questions)
+
+[Scala interview questions -basic](https://www.journaldev.com/8958/scala-interview-questions-answers)
+
+[Scala interview questions - intermediate](https://www.journaldev.com/9663/scala-interview-questions)
+
+[Scala interview questions - advanced](https://www.journaldev.com/8960/scala-advanced-interview-questions)
