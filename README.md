@@ -88,6 +88,10 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Scala interview questions - advanced](https://www.journaldev.com/8960/scala-advanced-interview-questions)
 
+[Python Interview questions-interviewbit](https://www.interviewbit.com/python-interview-questions/)
+
+[Python Interview questions-Edureka](https://www.interviewbit.com/python-interview-questions/)
+
 # Exercise - practice 
 
 [Six spark exercises](https://towardsdatascience.com/six-spark-exercises-to-rule-them-all-242445b24565)
