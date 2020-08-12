@@ -32,4 +32,88 @@ Create single deployment
     $ kubectl create secret generic --help
     $ kubectl create secret generic mysql --from-literal=password=root
     $ kubectl get secrets mysql -o yaml
-    
+
+### Sample kubernetes yaml
+
+    ---
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: currency-dimension-job
+      labels:
+        app: currency-dimension-job
+    spec:
+      containers:
+        - name: '${JOB_NAME}-image'
+          image: '${ARTIFACTORY_IMAGE}'
+          command:
+            - /spark-submit.sh
+          args:
+            - '--total-executor-cores'
+            - '1'
+            - '--executor-memory'
+            - 4G
+            - '--num-executors'
+            - '1'
+            - '--conf'
+            - spark.scheduler.mode=FAIR
+            - '--conf'
+            - spark.scheduler.allocation.file=fair_scheduler.xml
+            - '--conf'
+            - spark.sql.shuffle.partitions=5
+            - '--class'
+            - com.ibm.epm.framework.Controller
+            - controller_deploy.jar
+            - '-t'
+            - CurrencyDimension
+            - '-g'
+            - '${GOAL}'
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: CLOUDANT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: cloudant-credentials
+                  key: cloudant_username
+            - name: CLOUDANT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cloudant-credentials
+                  key: cloudant_password
+            - name: CLOUDANT_ACCOUNT
+              value: '${CLOUDANT_ACCOUNT}'
+            - name: CLOUDANT_DATABASE
+              value: '${CLOUDANT_DATABASE}'
+            - name: CLOUDANT_DECRYPTION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cloudant-decryption-key
+                  key: id_rsa
+          resources:
+            requests:
+              cpu: 0.001
+              memory: 10Mi
+            limits:
+              cpu: 2
+              memory: 2Gi
+          volumeMounts:
+            - name: '${NAMESPACE}-volume'
+              mountPath: /mnt
+      restartPolicy: Never
+      imagePullSecrets:
+        - name: artifactory-registry-secret
+      volumes:
+        - name: '${NAMESPACE}-volume'
+          persistentVolumeClaim:
+            claimName: 'pv-claim-${NAMESPACE}-cos'
+    ---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: currency-dimension-job
+    spec:
+      clusterIP: None
+      selector:
+        app: currency-dimension-job
+        
+Here, arguments like NAMESPACE, CLOUDANT_USERNAME, JOB_NAME etc can be supplied by bash script executing yaml or kubernetes secrets.
