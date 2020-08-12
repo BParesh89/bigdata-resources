@@ -63,6 +63,12 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Kubernetes & Docker](https://github.com/BParesh89/bigdata-resources/blob/master/kubernets&docker.md)
 
+# Data Modelling
+
+Dimension fact model, star schema vs snowflake, lambda vs kappa architecture
+
+[Data Modelling](https://github.com/BParesh89/bigdata-resources/blob/master/datamodelling.md)
+
 # Interview resources
 [Hadoop interview questions](https://www.besanttechnologies.com/hadoop-interview-questions-and-answers) 
 
