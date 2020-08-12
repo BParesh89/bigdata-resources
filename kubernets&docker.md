@@ -32,6 +32,13 @@ Create single deployment
     $ kubectl create secret generic --help
     $ kubectl create secret generic mysql --from-literal=password=root
     $ kubectl get secrets mysql -o yaml
+    
+### Troubleshooting
+    $ kubectl describe <podname>   # see described status of pod
+    $ kubectl logs <podname>    # see logs of kubernetes pod
+    $ kubectl exec -it <podname> /bin/bash  # to enter running pod and get bash terminal to debug/modify running container
+    $ kubectl get nodes --show-labels
+    $ kubectl get events
 
 ### Sample kubernetes yaml
 
