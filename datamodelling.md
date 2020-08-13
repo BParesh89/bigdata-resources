@@ -65,3 +65,24 @@ updated dimension row. A minimum of three additional columns should be added to 
 __Reference__
 1. [Kimball group guide](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf)
 2. [Guru 99 dimension modelling overview](https://www.guru99.com/dimensional-model-data-warehouse.html)
+
+
+## Star Schema & Snowflake Schema
+
+The schemas are designed to address the unique needs of very large database for analytical purpose(OLAP). 
+Types of Data Warehouse Schema:
+
+Following are 3 chief types of multidimensional schemas each having its unique advantages.
+
+* Star Schema
+* Snowflake Schema
+* Galaxy Schema
+
+### Star Schema
+
+Star schema is mutli-dimensional model used for data warehousing where there is one fact at the center of stars and dimensions are associated to it. It is called star schema
+as it resembles a start structure. The star schema is the simplest type of Data Warehouse schema. It is also known as Star Join Schema and is optimized for querying large data sets.
+
+In the following example,the fact table is at the center which contains keys to every dimension table like Dealer_ID, Model ID, Date_ID, Product_ID, Branch_ID & other attributes like Units sold and revenue.
+
+
