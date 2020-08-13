@@ -142,3 +142,8 @@ __Characteristics of Galaxy Schema__
 * Moreover, it is possible to build this type of schema by splitting the one-star schema into more Star schemes.
 * The dimensions are large in this schema which is needed to build based on the levels of hierarchy.
 * This schema is helpful for aggregating fact tables for better understanding.
+
+
+### Lambda vs Kappa Architecture
+
+[Lambda Vs Kappa](https://www.ericsson.com/en/blog/2015/11/data-processing-architectures--lambda-and-kappa)
