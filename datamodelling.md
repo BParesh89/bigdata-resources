@@ -85,4 +85,60 @@ as it resembles a start structure. The star schema is the simplest type of Data 
 
 In the following example,the fact table is at the center which contains keys to every dimension table like Dealer_ID, Model ID, Date_ID, Product_ID, Branch_ID & other attributes like Units sold and revenue.
 
+![](https://github.com/BParesh89/bigdata-resources/blob/master/star.png)
 
+__Characteristics of Star Schema__
+
+* Every dimension in a star schema is represented with the only one-dimension table.
+* The dimension table should contain the set of attributes.
+* The dimension table is joined to the fact table using a foreign key.
+* The dimension table are not joined to each other.
+* Fact table would contain key and measure.
+* The Star schema is easy to understand and provides optimal disk usage.
+* The dimension tables are not normalized. For instance, in the above figure, Country_ID does not have Country lookup table as an OLTP design would have.
+* The schema is widely supported by BI Tools.
+
+### Snowflake schema
+
+__SNOWFLAKE SCHEMA__ is a logical arrangement of tables in a multidimensional database such that the ER diagram resembles a snowflake shape. A Snowflake Schema is an extension of a Star Schema, and it adds additional dimensions. The dimension tables are normalized which splits data into additional tables.
+
+In the following example, Country is further normalized into an individual table.
+
+![](https://github.com/BParesh89/bigdata-resources/blob/master/snowflake.png)
+
+__Characteristics of Snowflake Schema__
+
+* The main benefit of the snowflake schema it uses smaller disk space.
+* Easier to implement a dimension is added to the Schema
+* Due to multiple tables query performance is reduced
+* The primary challenge that you will face while using the snowflake Schema is that you need to perform more maintenance efforts because of the more lookup tables.
+
+### Star Vs Snowflake Schema: Key Differences
+|Star Schema	| Snow Flake Schema| 
+| --- | --- |
+| Hierarchies for the dimensions are stored in the dimensional table.| 	Hierarchies are divided into separate tables.|
+| It contains a fact table surrounded by dimension tables.| One fact table surrounded by dimension table which are in turn surrounded by dimension table.|
+| In a star schema, only single join creates the relationship between the fact table and any dimension tables.|	A snowflake schema requires many joins to fetch the data.|
+| Simple DB Design.| Very Complex DB Design.|
+| Denormalized Data structure and query also run faster.| Normalized Data Structure.|
+| High level of Data redundancy. | Very low-level data redundancy.|
+| Single Dimension table contains aggregated data. |	Data Split into different Dimension Tables.|
+| Cube processing is faster.|	Cube processing might be slow because of the complex join.|
+| Offers higher performing queries using Star Join Query Optimization. Tables may be connected with multiple dimensions.| The Snow Flake Schema is represented by centralized fact table which unlikely connected with multiple dimensions.|
+
+
+### Galaxy Schema 
+
+A GALAXY SCHEMA contains multiple fact table that share dimension tables between them. It is also called Fact Constellation Schema. The schema is viewed as a collection of stars hence the name Galaxy Schema. It is kind of combination of star and snowflake schema.
+
+![](https://github.com/BParesh89/bigdata-resources/blob/master/snowflake.png)
+
+In Galaxy schema shares dimensions are called Conformed Dimensions.
+
+__Characteristics of Galaxy Schema__
+
+* The dimensions in this schema are separated into separate dimensions based on the various levels of hierarchy.
+* For example, if geography has four levels of hierarchy like region, country, state, and city then Galaxy schema should have four dimensions.
+* Moreover, it is possible to build this type of schema by splitting the one-star schema into more Star schemes.
+* The dimensions are large in this schema which is needed to build based on the levels of hierarchy.
+* This schema is helpful for aggregating fact tables for better understanding.
