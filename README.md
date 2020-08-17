@@ -59,6 +59,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [madhukarphatak](http://blog.madhukaraphatak.com/)
 
+[MyItLearnings](http://myitlearnings.com/)
+
 # DevOps
 
 [Kubernetes & Docker](https://github.com/BParesh89/bigdata-resources/blob/master/kubernets&docker.md)
