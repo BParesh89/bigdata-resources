@@ -61,6 +61,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [MyItLearnings](http://myitlearnings.com/)
 
+[spark performance tuning- Expedia medium blog](https://medium.com/expedia-group-tech/part-5-how-to-resolve-common-errors-when-switching-to-cost-efficient-apache-spark-executor-36e8d4290536)
+
 # DevOps
 
 [Kubernetes & Docker](https://github.com/BParesh89/bigdata-resources/blob/master/kubernets&docker.md)
