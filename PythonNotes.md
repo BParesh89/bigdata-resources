@@ -43,7 +43,7 @@ Output
 
    `a@ = 0`
 
-### Things to Remember
+#### Things to Remember
 Python is a case-sensitive language. This means, `Variable` and `variable` are not the same.
 
 Always give the identifiers a name that makes sense. While `c = 10` is a valid name, writing `count = 10` would make more sense, and it would be easier to figure out what it represents when you look at your code after a long gap.
@@ -115,7 +115,7 @@ For example:
     >>> 2+3
     5
     
-### Arithmetic operators
+#### Arithmetic operators
 
 Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication, etc.
 
@@ -152,7 +152,8 @@ Example 1: Arithmetic operators in Python
     # Output: x ** y = 50625
     print('x ** y =',x**y)
 
-### Comparison operators
+
+#### Comparison operators
 
 Comparison operators are used to compare values. It returns either True or False according to the condition.
 
@@ -190,7 +191,7 @@ Example 2: Comparison operators in Python
     print('x <= y is',x<=y)
     
 
-# Logical operators
+#### Logical operators
 
 Logical operators are the and, or, not operators.
 
@@ -217,7 +218,7 @@ Output
     x or y is True
     not x is False
     
-### Bitwise operators
+#### Bitwise operators
 
 Bitwise operators act on operands as if they were strings of binary digits. They operate bit by bit, hence the name.
 
@@ -235,7 +236,7 @@ In the table below: Let `x = 10` (0000 1010 in binary) and `y = 4` (0000 0100 in
 | >> | Bitwise right shift | x >> 2 = 2 (0000 0010) |
 | << | Bitwise left shift |	x << 2 = 40 (0010 1000) |
 
-### Assignment operators
+#### Assignment operators
 
 Assignment operators are used in Python to assign values to variables.
 
@@ -259,11 +260,11 @@ There are various compound operators in Python like `a += 5` that adds to the va
 | >>= | x >>= 5 | x = x >> 5 |
 | <<= | x <<= 5 | x = x << 5 |
 
-### Special operators
+#### Special operators
 
 Python language offers some special types of operators like the identity operator or the membership operator. They are described below with examples.
 
-#### Identity operators
+##### Identity operators
 `is` and `is not` are the identity operators in Python. They are used to check if two values (or variables) are located on the same part of the memory. Two variables that are equal does not imply that they are identical.
 
 | Operator | Meaning | Example |
@@ -296,7 +297,7 @@ Output
     True
     False
 
-#### Membership operators
+##### Membership operators
 
 `in` and `not in` are the membership operators in Python. They are used to test whether a value or variable is found in a sequence (string, list, tuple, set and dictionary).
 
