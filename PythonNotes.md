@@ -630,4 +630,207 @@ Example :
     [2, 10, 8, 12, 16, 22, 6, 24]
 
 
+## Python Data Structures
+
+### List
+
+In Python programming, a list is created by placing all the items (elements) inside square brackets [], separated by commas.
+
+It can have any number of items and they may be of different types (integer, float, string etc.).
+
+    # empty list
+    my_list = []
+
+    # list of integers
+    my_list = [1, 2, 3]
+
+    # list with mixed data types
+    my_list = [1, "Hello", 3.4]
+
+List is mutable.
+
+Methods are append(value), insert(pos,value),pop(index)
+
+List comprehension is an elegant and concise way to create a new list from an existing list in Python.
+
+A list comprehension consists of an expression followed by for statement inside square brackets.
+
+Here is an example to make a list with each item being increasing power of 2.
+
+    pow2 = [2 ** x for x in range(10)]
+    print(pow2)
+    # output - [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
+
+### Tuple
+
+Tuple is similar to list but immutable. 
+
+A tuple is created by placing all the items (elements) inside parentheses (), separated by commas. The parentheses are optional, however, it is a good practice to use them.
+
+A tuple can have any number of items and they may be of different types.
+
+Example :
+
+    # Different types of tuples
+
+    # Empty tuple
+    my_tuple = ()
+    print(my_tuple)
+
+    # Tuple having integers
+    my_tuple = (1, 2, 3)
+    print(my_tuple)
+
+    # tuple with mixed datatypes
+    my_tuple = (1, "Hello", 3.4)
+    print(my_tuple)
+
+    # nested tuple
+    my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+    print(my_tuple)
+
+We can pack and unpack tuple like below ;
+
+    my_tuple = 3, 4.6, "dog"
+    print(my_tuple)
+
+    # tuple unpacking is also possible
+    a, b, c = my_tuple
+
+Indexing and slicing is similar to list.
+
+Elements of a tuple cannot be changed once they have been assigned. But, if the element is itself a mutable data type like list, its nested items can be changed.
+
+We can also assign a tuple to different values (reassignment).
+
+    # Changing tuple values
+    my_tuple = (4, 2, 3, [6, 5])
+
+
+    # TypeError: 'tuple' object does not support item assignment
+    # my_tuple[1] = 9
+
+    # However, item of mutable element can be changed
+    my_tuple[3][0] = 9    # Output: (4, 2, 3, [9, 5])
+    print(my_tuple)
+
+    # Tuples can be reassigned
+    my_tuple = ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+
+    # Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+    print(my_tuple)
+
+### Set
+
+A set is an unordered collection of items. Every set element is unique (no duplicates) and must be immutable (cannot be changed).
+
+However, a set itself is mutable. We can add or remove items from it.
+
+Sets can also be used to perform mathematical set operations like union, intersection, symmetric difference, etc.
+
+Example :
+
+    # Different types of sets in Python
+    # set of integers
+    my_set = {1, 2, 3}
+    print(my_set)
+
+    # set of mixed datatypes
+    my_set = {1.0, "Hello", (1, 2, 3)}
+    print(my_set)
+
+Add() method can be used to insert single element and update() method can be used to insert multiple elements using a list or tuple.
+
+    # add an element
+    # Output: {1, 2, 3}
+    my_set.add(2)
+    print(my_set)
+
+    # add multiple elements
+    # Output: {1, 2, 3, 4}
+    my_set.update([2, 3, 4])
+    print(my_set)
+
+A particular item can be removed from a set using the methods `discard()` and `remove()`.
+
+The only difference between the two is that the `discard()` function leaves a set unchanged if the element is not present in the set. On the other hand, the `remove()` function will raise an error in such a condition (if element is not present in the set).
+
+Similarly, we can remove and return an item using the `pop()` method.
+
+__Since set is an unordered data type, there is no way of determining which item will be popped. It is completely arbitrary.__
+
+We can also remove all the items from a set using the `clear()` method.
+
+#### Set operations
+
+To Do.
+
+### Dictionary
+
+Python dictionary is an unordered collection of items. Each item of a dictionary has a key/value pair.
+
+Dictionaries are optimized to retrieve values when the key is known.
+
+While the values can be of any data type and can repeat, keys must be of immutable type (string, number or tuple with immutable elements) and must be unique.
+
+    # empty dictionary
+    my_dict = {}
+
+    # dictionary with integer keys
+    my_dict = {1: 'apple', 2: 'ball'}
+
+    # dictionary with mixed keys
+    my_dict = {'name': 'John', 1: [2, 4, 3]}
+
+    # using dict()
+    my_dict = dict({1:'apple', 2:'ball'})
+
+    # from sequence having each item as a pair
+    my_dict = dict([(1,'apple'), (2,'ball')])
+
+We can also create dicitionary using `dict()` method. 
+
+To access element of any dictionary we can use like :
+
+    # Output: Jack
+    print(my_dict['name'])
+
+We can remove a particular item in a dictionary by using the pop() method. This method removes an item with the provided key and returns the value.
+
+The popitem() method can be used to remove and return an arbitrary (key, value) item pair from the dictionary. All the items can be removed at once, using the clear() method.
+
+We can also use the del keyword to remove individual items or the entire dictionary itself.
+
+    # Removing elements from a dictionary
+
+    # create a dictionary
+    squares = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+    # remove a particular item, returns its value
+    # Output: 16
+    print(squares.pop(4))
+
+    # Output: {1: 1, 2: 4, 3: 9, 5: 25}
+    print(squares)
+
+    # remove an arbitrary item, return (key,value)
+    # Output: (5, 25)
+    print(squares.popitem())
+
+    # Output: {1: 1, 2: 4, 3: 9}
+    print(squares)
+
+    # remove all items
+    squares.clear()
+
+    # Output: {}
+    print(squares)
+
+    # delete the dictionary itself
+    del squares
+
+    # Throws Error
+    print(squares)
+
+`keys()` and `values()` methods will give new object of keys and values in dictionary respectively.
 
