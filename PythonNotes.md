@@ -834,3 +834,68 @@ We can also use the del keyword to remove individual items or the entire diction
 
 `keys()` and `values()` methods will give new object of keys and values in dictionary respectively.
 
+## Python File and Exception Handling
+Example :
+
+    try:
+    f = open("test.txt", encoding = 'utf-8')
+    # perform file operations
+    finally:
+    f.close()
+
+The best way to close a file is by using the with statement. This ensures that the file is closed when the block inside the with statement is exited.
+
+We don't need to explicitly call the close() method. It is done internally.
+
+    with open("test.txt", encoding = 'utf-8') as f:
+    # perform file operations
+
+
+To Do.
+
+## OOPS in Python
+
+### Classes and Objects in Python
+An object is simply a collection of data (variables) and methods (functions) that act on those data. Similarly, a class is a blueprint for that object.
+
+We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.
+
+A class is a blueprint of objects.
+
+An object (instance) is an instantiation of a class. When class is defined, only the description for the object is defined. Therefore, no memory or storage is allocated.
+
+Example 1: Creating Class and Object in Python
+
+    class Parrot:
+
+        # class attribute
+        species = "bird"
+
+        # instance attribute
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+
+    # instantiate the Parrot class
+    blu = Parrot("Blu", 10)
+    woo = Parrot("Woo", 15)
+
+    # access the class attributes
+    print("Blu is a {}".format(blu.__class__.species))
+    print("Woo is also a {}".format(woo.__class__.species))
+
+    # access the instance attributes
+    print("{} is {} years old".format( blu.name, blu.age))
+    print("{} is {} years old".format( woo.name, woo.age))
+
+Output
+
+    Blu is a bird
+    Woo is also a bird
+    Blu is 10 years old
+    Woo is 15 years old
+
+`__init__` is the initializer method(constructor) that is first run as soon as the object is created.
+
+
+
