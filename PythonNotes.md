@@ -1,5 +1,7 @@
 # Python Concepts
 
+__References -->__ [Programiz](https://www.programiz.com/python-programming)
+
 ## Python Keywords
 
 Keywords are the reserved words in Python.
@@ -897,5 +899,260 @@ Output
 
 `__init__` is the initializer method(constructor) that is first run as soon as the object is created.
 
+`self` is used to represent the instance of class. With this keyword, you can access the attributes and method of a class in python. It binds the attributes with given arguemnt.
+
+### Encapsulation
+
+Using OOP in python ,we can restrict access to methods and variables. This prevents data from direct modification which is called encapsulation. In Python, we can have `private` and `protected` variable.
+
+Protected variables are accessible only by the class derived from its class. They are declared with appending `_`(single underscore) before the name of a variable in class.
+
+Private variables are only accessible in the class in which they are declared. They are declated with appending `__` before(double underscore) the name of variable in class.
+
+Reference --> [https://www.geeksforgeeks.org/access-modifiers-in-python-public-private-and-protected/](https://www.geeksforgeeks.org/access-modifiers-in-python-public-private-and-protected/)
+
+### Inheritance in Python
+
+Inheritanace refers to defining a new class using little or no modification to an existing class. The new class is called __dervied(or child) class__ and existing class is called __base(or parent) class__. 
+
+Example 
+
+    # Base class
+    class Polygon:
+        def __init__(self, no_of_sides):
+            self.n = no_of_sides
+            self.sides = [0 for i in range(no_of_sides)]
+
+        def inputSides(self):
+            self.sides = [float(input("Enter side "+str(i+1)+" : ")) for i in range(self.n)]
+
+        def dispSides(self):
+            for i in range(self.n):
+                print("Side",i+1,"is",self.sides[i])
+
+    # Derived class
+    class Triangle(Polygon):
+        def __init__(self):
+            Polygon.__init__(self,3)  # or super.__init__(self,3)
+
+        def findArea(self):
+            a, b, c = self.sides
+            # calculate the semi-perimeter
+            s = (a + b + c) / 2
+            area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+            print('The area of the triangle is %0.2f' %area)
+
+Output
+
+    >>> t = Triangle()
+
+    >>> t.inputSides()
+    Enter side 1 : 3
+    Enter side 2 : 5
+    Enter side 3 : 4
+
+    >>> t.dispSides()
+    Side 1 is 3.0
+    Side 2 is 5.0
+    Side 3 is 4.0
+
+    >>> t.findArea()
+    The area of the triangle is 6.00
+
+Above, `super` keyword can be used to refer the base class.
+
+Two built-in functions `isinstance()` and `issubclass()` are used to check inheritances.
+
+__Python also supports mutliple inheritance.__ A derived class can inherit more than one class.
+
+Example :
+
+    class Base1:
+        pass
+
+    class Base2:
+        pass
+
+    class MultiDerived(Base1, Base2):
+        pass
+
+__Python supports multi-level inheritance as well.__ A class can also inherit from a derived class.It can be of any depth in Python.
+
+In multilevel inheritance, features of the base class and the derived class are inherited into the new derived class.
+
+Example
+
+    class Base:
+        pass
+
+    class Derived1(Base):
+        pass
+
+    class Derived2(Derived1):
+        pass
+
+Multiple and multi-level inheritance creates a problem for searching the attributes in which class first. 
+
+In the multiple inheritance scenario, any specified attribute is searched first in the current class. After it , the search continues in parent class in depth first, left right fashion without searching the same class twice. These set of rules to find the order where to look for method is called __Method Resolution Order(MRO).__ MRO of an class can be looked with `__mro__` attribute or `mro()` method.
+
+Example
+
+    >>> MultiDerived.__mro__
+    (<class '__main__.MultiDerived'>,
+    <class '__main__.Base1'>,
+    <class '__main__.Base2'>,
+    <class 'object'>)
+
+## Iterators
+
+Iterators are the objects that can be iterated upon. Examples are list, set, tuple etc.
+These objects will simply return data, one element at a time.
+
+Technically, a python iterator object must implement two methods : `__iter__()` and `__next__()`, collectively called the iterator protocol.    
+
+To get iterator from python list, tuple etc, we need to use `iter()` function on them. To get element from them, we need to call `next()` like below :
+
+    >>> myiter = iter([1,2,3])
+    >>> next(myiter)
+    1   
+    >>> next(myiter)
+    2
+    >>> next(myiter)
+    3
+    >>> next(myiter)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    StopIteration
+
+After elements are finished, if we call iter(), it gives error `StopIteration`.
+
+
+## Generators
+
+Generators are fairly simple way of creating iterators. We dont need to implement whole class with `__iter__()` and `__next()__` methods. 
+
+A generator is a function that returns an object(iterator) which we can iterate over(one value at a time).
+
+Generator can be defined as similar to normal function, only difference is , it uses `yield` keyword instead of `return`.  
+
+The differnce is that while a `return` statement terminates a function entirely, `yield` statement pauses the function saving all its state and later continues from there on successive calls.
+
+Example 
+
+    ## generate fibonacci numbers upto n
+    def fib(n):
+        p, q = 0, 1
+        while(p < n):
+            yield p
+            p, q = q, p + q
+
+    x = fib(10)    # create generator object 
+    
+    ## iterating using __next__(), for Python2, use next()
+    x.__next__()    # output => 0
+    x.__next__()    # output => 1
+    x.__next__()    # output => 1
+    x.__next__()    # output => 2
+    x.__next__()    # output => 3
+    x.__next__()    # output => 5
+    x.__next__()    # output => 8
+    x.__next__()    # error
+    
+    ## iterating using loop
+    for i in fib(10):
+        print(i)    # output => 0 1 1 2 3 5 8
+
+Similar to list comprehension, we can have __generator comprehension__ as well. It is very similar to list comprehension, but major difference is list comprehension produces entire list after execution while generator doesn't return any list or value, it returns a generator object. We need to call next to get value out of it. This way it supports `lazy evaluation` in scala.
+
+    >>> my_list = [1,2,3]
+    >>> gener = (x*x for x in my_list)
+    >>> print(gener)
+    <generator object <genexpr> at 0x000001CC3FF4DF90>
+    >>> next(gener)
+    1
+    >>> next(gener)
+    4
+    >>> next(gener)
+    9
+    >>> next(gener)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    StopIteration
+
+## Closures in Python
+
+A closure is a function object that remembers values in enclosing scope even if they are not present in memory.
+
+Example :
+
+    def print_msg(msg):
+        # This is the outer enclosing function
+
+        def printer():
+            # This is the nested function
+            print(msg)
+
+        return printer  # returns the nested function
+
+
+    # Now let's try calling this function.
+    # Output: Hello
+    another = print_msg("Hello")
+    another()
+
+Output
+
+`Hello`
+
+The `print_msg()` function was called with the string "Hello" and the returned function was bound to the name another. On calling `another()`, the message was still remembered although we had already finished executing the `print_msg()` function.
+
+This technique by which some data ("Hello in this case) gets attached to the code is called __closure__ in Python.
+
+This value in the enclosing scope is remembered even when the variable goes out of scope or the function itself is removed from the current namespace.
+
+The criteria that must be met to create closure in Python are summarized in the following points.
+
+* We must have a nested function (function inside a function).
+
+* The nested function must refer to a value defined in the enclosing function.
+
+*The enclosing function must return the nested function.
+
+__When and Why to use Closures__
+
+* As closures are used as callback functions, they provide some sort of data hiding. This helps us to reduce the use of global variables.
+
+* When we have few functions in our code, closures prove to be efficient way. But if we need to have many functions, then go for class (OOP).
+
+## Decorators
+
+Decorators in python are essentially functions that add additional functionality to an existing function without changing its structure. 
+
+They are represented by the @decorator_name in Python and are called in bottom-up fashion. For example:
+
+    # decorator function to convert to lowercase
+    def lowercase_decorator(function):
+        def wrapper():
+            func = function()
+            string_lowercase = func.lower()
+            return string_lowercase
+        return wrapper
+
+    # decorator function to split words
+    def splitter_decorator(function):
+        def wrapper():
+            func = function()
+            string_split = func.split()
+            return string_split
+        return wrapper
+
+    @splitter_decorator	# this is executed next
+    @lowercase_decorator	# this is executed first
+    def hello():
+        return 'Hello World'
+
+    hello() 	 # output => [ 'hello' , 'world' ]
+
+The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing them.
 
 
