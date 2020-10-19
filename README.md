@@ -65,6 +65,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [StreamBench-spark & kafka streaming](https://streambench.wordpress.com/category/apache-spark/)  --> Blog for spark and kafka streaming
 
+[Kafka-poc-project-udemy](https://medium.com/@stephane.maarek/how-to-use-apache-kafka-to-transform-a-batch-pipeline-into-a-real-time-one-831b48a6ad85)
+
 # DevOps
 
 [Kubernetes & Docker](https://github.com/BParesh89/bigdata-resources/blob/master/kubernets&docker.md)
