@@ -63,6 +63,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [spark performance tuning- Expedia medium blog](https://medium.com/expedia-group-tech/part-5-how-to-resolve-common-errors-when-switching-to-cost-efficient-apache-spark-executor-36e8d4290536)
 
+[StreamBench-spark & kafka streaming](https://streambench.wordpress.com/category/apache-spark/)  --> Blog for spark and kafka streaming
+
 # DevOps
 
 [Kubernetes & Docker](https://github.com/BParesh89/bigdata-resources/blob/master/kubernets&docker.md)
