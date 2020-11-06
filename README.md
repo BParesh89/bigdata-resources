@@ -67,6 +67,8 @@ This repo contains resources related to several big data technologies like hadoo
 
 [Kafka-poc-project-udemy](https://medium.com/@stephane.maarek/how-to-use-apache-kafka-to-transform-a-batch-pipeline-into-a-real-time-one-831b48a6ad85)
 
+[8 non-obvious features in Spark SQL that are worth knowing](https://towardsdatascience.com/did-you-know-this-in-spark-sql-a7398bfcc41e)
+
 # DevOps
 
 [Kubernetes & Docker](https://github.com/BParesh89/bigdata-resources/blob/master/kubernets&docker.md)
