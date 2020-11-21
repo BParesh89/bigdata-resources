@@ -100,6 +100,8 @@ Dimension fact model, star schema vs snowflake, lambda vs kappa architecture
 
 [Kafka Interview questions](https://www.onlineinterviewquestions.com/apache-kafka-interview-questions)
 
+[Kafka interview questions2](https://whiteboardtalks.com/kafka-interview-questions/)
+
 [Scala interview questions](https://github.com/Jarlakxen/Scala-Interview-Questions)
 
 [Scala interview questions -basic](https://www.journaldev.com/8958/scala-interview-questions-answers)
